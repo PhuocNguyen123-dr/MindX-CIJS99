@@ -47,34 +47,49 @@ addPrefix = (array, prelex) => {
 
 addPrefix(array, "Number"); // ['Number: Một', 'Number: Hai', 'Number: Ba']
 
-
 // ** Bài 4
 const series = [2, 3, 4];
-doubleNumber = (series)=> {
+doubleNumber = (series) => {
   let result = [];
   for (let i = 0; i < series.length; i++) {
-    let a = series[i]*2;
-    
-    result.push(a)
+    let a = series[i] * 2;
+
+    result.push(a);
   }
   console.log(result);
-}
+};
 
-doubleNumber(series) // [4, 6, 8]
-
+doubleNumber(series); // [4, 6, 8]
 
 // ** Bài 5
 
-const arry = [1, 2, 3, 4, 5,6, 7];
-filterNumber = (arry)=> {
+const arry = [1, 2, 3, 4, 5, 6, 7];
+filterNumber = (arry) => {
   let result = [];
   for (let i = 0; i < arry.length; i++) {
     if (arry[i] % 2 !== 0) {
-      result.push(arry[i])
+      result.push(arry[i]);
     }
-    
   }
   console.log(result);
-}
+};
 
-filterNumber(arry) // [1, 3, 5, 7]
+filterNumber(arry); // [1, 3, 5, 7]
+
+// **Bài 6
+
+const employees = [
+  { id: 1, name: "John", workingDays: 22 },
+  { id: 2, name: "Jane", workingDays: 20 },
+  { id: 3, name: "Mark", workingDays: 25 },
+];
+
+total = () => {
+  let result = 0;
+  for (let i = 0; i  < employees.length; i++) {
+    result += employees[i].workingDays;
+  }
+  console.log(result);
+  
+};
+total()
